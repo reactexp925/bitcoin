@@ -1,6 +1,8 @@
 PODS:
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
+  - FBAudienceNetwork (5.7.1):
+    - FBSDKCoreKit/Basics (>= 5.6.0)
   - FBLazyVector (0.61.5)
   - FBReactNativeSpec (0.61.5):
     - Folly (= 2018.10.22.00)
@@ -9,6 +11,7 @@ PODS:
     - React-Core (= 0.61.5)
     - React-jsi (= 0.61.5)
     - ReactCommon/turbomodule/core (= 0.61.5)
+  - FBSDKCoreKit/Basics (6.0.0)
   - Folly (2018.10.22.00):
     - boost-for-react-native
     - DoubleConversion
@@ -182,6 +185,12 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
   - React-jsinspector (0.61.5)
+  - react-native-google-analytics-bridge (7.1.0):
+    - react-native-google-analytics-bridge/Core (= 7.1.0)
+  - react-native-google-analytics-bridge/Core (7.1.0):
+    - React
+  - react-native-keep-awake (4.0.0):
+    - React
   - React-RCTActionSheet (0.61.5):
     - React-Core/RCTActionSheetHeaders (= 0.61.5)
   - React-RCTAnimation (0.61.5):
@@ -217,6 +226,17 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
     - ReactCommon/jscallinvoker (= 0.61.5)
+  - ReactNativeAdsFacebook (6.3.1):
+    - FBAudienceNetwork
+    - React
+  - RNDeviceInfo (5.5.3):
+    - React
+  - RNI18n (2.0.15):
+    - React
+  - RNStoreReview (0.1.5):
+    - React
+  - RNVectorIcons (6.6.0):
+    - React
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -236,6 +256,8 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-google-analytics-bridge (from `../node_modules/react-native-google-analytics-bridge`)
+  - react-native-keep-awake (from `../node_modules/react-native-keep-awake`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -247,11 +269,18 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - ReactNativeAdsFacebook (from `../node_modules/react-native-fbads`)
+  - RNDeviceInfo (from `../node_modules/react-native-device-info`)
+  - RNI18n (from `../node_modules/react-native-i18n`)
+  - RNStoreReview (from `../node_modules/react-native-store-review/ios`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
     - boost-for-react-native
+    - FBAudienceNetwork
+    - FBSDKCoreKit
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -282,6 +311,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-google-analytics-bridge:
+    :path: "../node_modules/react-native-google-analytics-bridge"
+  react-native-keep-awake:
+    :path: "../node_modules/react-native-keep-awake"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -302,14 +335,26 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  ReactNativeAdsFacebook:
+    :path: "../node_modules/react-native-fbads"
+  RNDeviceInfo:
+    :path: "../node_modules/react-native-device-info"
+  RNI18n:
+    :path: "../node_modules/react-native-i18n"
+  RNStoreReview:
+    :path: "../node_modules/react-native-store-review/ios"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
+  FBAudienceNetwork: 33fc8c8c07c1cdbf5279784b73729c6410809daa
   FBLazyVector: aaeaf388755e4f29cd74acbc9e3b8da6d807c37f
   FBReactNativeSpec: 118d0d177724c2d67f08a59136eb29ef5943ec75
+  FBSDKCoreKit: fe738b172590e622c86735b45e20d196848b54df
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
   RCTRequired: b153add4da6e7dbc44aebf93f3cf4fcae392ddf1
@@ -321,6 +366,8 @@ SPEC CHECKSUMS:
   React-jsi: cb2cd74d7ccf4cffb071a46833613edc79cdf8f7
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
+  react-native-google-analytics-bridge: fac6becc9475cae635bff51382be089ea97bddda
+  react-native-keep-awake: afad8a51dfef9fe9655a6344771be32c8596d774
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
   React-RCTBlob: d89293cc0236d9cb0933d85e430b0bbe81ad1d72
@@ -331,6 +378,11 @@ SPEC CHECKSUMS:
   React-RCTText: 9ccc88273e9a3aacff5094d2175a605efa854dbe
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
+  ReactNativeAdsFacebook: f26673210344d50687d4c7b1b4242c3b6b48c33f
+  RNDeviceInfo: 310c1f43d418d950a193c7650de2f9559c906048
+  RNI18n: e2f7e76389fcc6e84f2c8733ea89b92502351fd8
+  RNStoreReview: 62d6afd7c37db711a594bbffca6b0ea3a812b7a8
+  RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
 PODFILE CHECKSUM: eb3d474f4f8b3261a42a1e60846591f37c6f1a87
